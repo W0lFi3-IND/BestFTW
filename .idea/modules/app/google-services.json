@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "9847919181",
+    "firebase_url": "https://best-from-the-waste.firebaseio.com",
+    "project_id": "best-from-the-waste",
+    "storage_bucket": "best-from-the-waste.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9847919181:android:5d1d0c779cf07df5014204",
+        "android_client_info": {
+          "package_name": "com.ibm.androidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9847919181-lmvg0l5tgodk9ltg5i0m1d3joqaio95m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ibm.androidapp",
+            "certificate_hash": "1fdda49cc49136bc1e13ea33f334f6bb9ea9050d"
+          }
+        },
+        {
+          "client_id": "9847919181-lm7o3sb4mp7m9k0t2vebvnlfi4v4tuiq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZVcUiu_lFAh1zZgQQLJaUKIUFwacOjag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "9847919181-lm7o3sb4mp7m9k0t2vebvnlfi4v4tuiq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
