@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".Dashboard">
 
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="202dp"
+        app:layout_constraintBottom_toTopOf="@+id/cleanyourself"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_url="https://assets8.lottiefiles.com/private_files/lf30_kWMODo.json" />
+
     <Button
         android:id="@+id/cleanyourself"
         android:layout_width="0dp"

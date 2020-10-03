@@ -9,6 +9,8 @@ import android.util.Log;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -27,8 +29,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void startact() {
-        startActivity(new Intent(this,login.class));
-        finish();
+        if (FirebaseAuth.getInstance().getCurrentUser() != null){
+            startActivity(new Intent(this,Dashboard.class));
+            finish();
+        }
+        else {
+            startActivity(new Intent(this, login.class));
+            finish();
+        }
     }
 
 
