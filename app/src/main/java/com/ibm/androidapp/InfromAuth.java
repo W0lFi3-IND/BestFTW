@@ -1,5 +1,7 @@
 package com.ibm.androidapp;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
@@ -13,6 +15,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -21,19 +24,20 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.material.snackbar.Snackbar;
 
 public class InfromAuth extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private static final int REQUEST_LOCATION = 1;
     LocationManager locationManager;
-    String latitude, longitude;
     double lat= -34, lan=151;
-
+   ConstraintLayout cl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_infrom_auth);
+cl = findViewById(R.id.cl);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         ActivityCompat.requestPermissions( this,
                 new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
@@ -47,6 +51,15 @@ public class InfromAuth extends FragmentActivity implements OnMapReadyCallback {
             getLocation();
         }
 
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+          Intent i = new Intent(getApplicationContext(),uploadPhoto.class);
+          i.putExtra("Long",lan);
+          i.putExtra("Lat",lat);
+          startActivity(i);
+            }
+        });
         }
 
     @Override
