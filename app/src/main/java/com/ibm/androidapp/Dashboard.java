@@ -21,5 +21,11 @@ public class Dashboard extends AppCompatActivity {
                     }
                 }
         );
+        findViewById(R.id.cleanyourself).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),CleanUp.class));
+            }
+        });
     }
 }
