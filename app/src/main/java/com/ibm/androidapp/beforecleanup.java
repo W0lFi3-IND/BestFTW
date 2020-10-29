@@ -24,6 +24,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -66,9 +67,8 @@ public class beforecleanup extends AppCompatActivity {
         }
     }
     private void firebase(Uri contentUri) {
-        DateFormat dfd = new SimpleDateFormat("d/M/yyyy");
-        Date dated = new Date();
-        String dd = dfd.format(dated);
+        Date currentTime = Calendar.getInstance().getTime();
+        String dd = currentTime.toString();
         final StorageReference image = mStorageRef.child("PhotosCleanup"+ "/" + mUser.getUid()+dd);
         mProgressBar.setVisibility(View.VISIBLE);
         uploadingText.setVisibility(View.VISIBLE);
