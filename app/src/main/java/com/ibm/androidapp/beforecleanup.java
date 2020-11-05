@@ -48,7 +48,7 @@ public class beforecleanup extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         mStorageRef = FirebaseStorage.getInstance().getReference();
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("CleanUp").child("Before");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("CleanUp").child(mUser.getUid());
         openGallery();
 
     }
@@ -83,7 +83,7 @@ public class beforecleanup extends AppCompatActivity {
                                 DateFormat df = new SimpleDateFormat("d/M/yyyy");
                                 Date date = new Date();
                                 String d = df.format(date);
-                                mDatabase = mDatabase.child(mUser.getUid());
+                                mDatabase = mDatabase.child("Before");
                                 HashMap<String, String> map = new HashMap<>();
                                 map.put("url", uri.toString());
                                 map.put("date",d);

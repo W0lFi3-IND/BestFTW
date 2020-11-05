@@ -18,5 +18,11 @@ public class CleanUp extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),beforecleanup.class));
             }
         });
+        findViewById(R.id.a).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),aftercleanup.class));
+            }
+        });
     }
 }
